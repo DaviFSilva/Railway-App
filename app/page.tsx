@@ -5,7 +5,9 @@ export default async function Home() {
   let users: User[] = [];
   try {
     const result = await db.query('SELECT id, username, psk FROM users', []);
+    console.log(result)
     users = result.rows;
+    console.log(users)
   } catch (error) {
     console.error('Error fetching users:', error);
   }
