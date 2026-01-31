@@ -5,15 +5,14 @@ export default async function Home() {
   let users: User[] = [];
   try {
     const result = await db.query('SELECT id, username, psk FROM users', []);
-    console.log(result)
     users = result.rows;
-    console.log(users)
   } catch (error) {
     console.error('Error fetching users:', error);
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
+      <p>{process.env.DATABASE_PUBLIC_URL}</p>
       <h1 className="text-4xl font-bold mb-8">Users</h1>
       <div className="w-full max-w-4xl">
         <table className="w-full text-left border-collapse">
