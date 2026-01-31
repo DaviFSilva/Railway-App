@@ -12,7 +12,6 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <p>{process.env.DATABASE_PUBLIC_URL}</p>
       <h1 className="text-4xl font-bold mb-8">Users</h1>
       <div className="w-full max-w-4xl">
         <table className="w-full text-left border-collapse">

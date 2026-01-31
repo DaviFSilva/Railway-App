@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start --hostname ::",
+    "build": "cross-env IS_BUILD=true next build",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@types/pg": "^8.16.0",
+    "cross-env": "^10.1.0",
     "next": "16.1.6",
     "pg": "^8.18.0",
     "react": "19.2.3",
